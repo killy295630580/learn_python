@@ -89,7 +89,7 @@ git stash pop						|提取并删除最后一次保存的缓存区
 # 14. 远程库
 命令|作用
 :---|:---
->ssh-keygen -t rsa -C "youremail@example.com"				|创建SSH Key, 生成<.ssh\id_rsa> 和 <.ssh\id_rsa.pub> 这两个文件
+ssh-keygen -t rsa -C "youremail@example.com"				|创建SSH Key, 生成<.ssh\id_rsa> 和 <.ssh\id_rsa.pub> 这两个文件
 git remote add origin git@server-name:path/repo-name.git 	|关联指定远程库 ， 起名为origin
 git remote  												|查看当前指定的远程库 ， 显示为别名，例如：origin
 git remote -v  												|查看当前指定的远程库 ， 显示为详细内容，远程库的具体地址
