@@ -6,7 +6,7 @@ photofiles = ['img_1074.jpg', 'img_1076.jpg', 'img_1077.jpg']
 
 
 class BatchRename(Template):
-	"""."""
+    """."""
     delimiter = '%'
 
 
