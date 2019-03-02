@@ -77,6 +77,31 @@ is not		|不相同
 	-- 实例属性是实例自己拥有的属性 ， 不能被别的实例所使用 ， 即便是同一个类型的实例 ， 只针对本身有效 ， 互不干扰
 	-- 实例属性 尽量不要跟 类属性 起相同名字 ， 否则类属性会被屏蔽掉
 
+#### 11. 类中有特殊用途的属性与函数
+	__slots__      : 在类定义的时候添加此属性，用于限制实例只能添加列表中的属性。子类无效。
+	__init__(self) : 类的构造函数
+	__len__(self)  : 让类能使用len()函数
+	__str__(self)  : 定义类被print时打印出来的内容
+	__repr__(self) : 定义类被直接显示时打印出来的内容
+	__iter__(self) : 让类具有类似list或tuple那样被迭代的功能, 返回一个可迭代对象
+	__next__(self) : 定义可迭代对象 ， 被next()调用
+	__getitem__(self,index) : 定义[index]操作符"读"功能，
+				: 如果index为slice类型，即可以定义切片操作
+	__setitem__(self,index) ：定义[index]操作符"写"功能
+	__delitem__(self,index) ：定义del[index]操作
+	__getattr__(self,attr)	: 用于调用的属性或者方法不存在时被调用
+	__call__(self,args)	: 让类对象能像函数一样被调用 , 可通过callable(对象)判断此方法有没有被定义
+	...... 
+[官方文档]:https://docs.python.org/3/reference/datamodel.html#special-method-names
+[Python的官方文档][官方文档]
+
+#### 12. 装饰器 @property
+[函数装饰器]:python_file\hello9.py
+[类装饰器]:python_file\hello12.py
+[函数的装饰器][函数装饰器]
+[类的装饰器][类装饰器]
+
+#### 13.
 
 
 
@@ -88,4 +113,13 @@ is not		|不相同
 
 
 
+
+
+-----
+[1]:http://www.runoob.com/python3/python3-tutorial.html
+[2]:http://www.runoob.com/manual/pythontutorial3/docs/html/appetite.html
+[3]:https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000
+##### [Python 3 教程][1]
+##### [Python 入门指南][2]
+##### [廖雪峰的Python教程][3]
 
